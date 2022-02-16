@@ -1,38 +1,82 @@
-.App {
+body {
+  background: rgb(232, 234, 248);
+}
+
+.forecast-section {
+  margin-top: 25px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  position: relative;
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
+}
+
+.forecast-section::after {
+  content: "";
+  background-image: url("../public/images/planet.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.forecast-section span {
+  font-size: 20px;
+}
+
+.level {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 600px) {
+  .level {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.level-item {
+  padding: 0 20px;
+}
+
+.heading.block-title {
+  text-transform: uppercase;
+  color: rgb(107, 143, 123);
+  font-size: 20px;
+  margin-bottom: 40px;
+  margin-top: 40px;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+@media (max-width: 600px) {
+  .heading.block-title {
+    margin-bottom: 10px;
+    margin-top: 40px;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.description {
+  text-align: center;
+  color: aliceblue;
+  font-size: 25px;
 }
 
-.App-link {
-  color: #61dafb;
+.hero__title {
+  text-align: center;
+  font-size: 25px;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  color: rgb(56, 63, 61);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.level-item__img {
+  display: block;
+  margin: 0 auto;
 }
